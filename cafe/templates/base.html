@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    {% block styles %}
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 16px; }
+        nav a { margin-right: 16px; text-decoration: none; color: #6f4e37; font-weight: bold; }
+        footer { margin-top: 40px; padding-top: 12px; border-top: 1px solid #ccc; color: #666; }
+    </style>
+    {% endblock %}
+</head>
+<body>
+    {% include "_navbar.html" %}
+
+    {% block content %}{% endblock %}
+
+    {% include "_footer.html" %}
+</body>
+</html>
